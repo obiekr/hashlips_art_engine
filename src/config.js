@@ -37,6 +37,19 @@ const layerConfigurations = [
   },
 ];
 
+/* format
+"decider_image.png": ["incompatible_with_this1.png", "incompatible_with_this2.png", "incompatible_with_this3.png"],
+"another_decider_image.png": ["incompatible_with_this4.png"],
+
+"decider_image.png" will not be paired with "incompatible_with_this1.png"
+"another_decider_image.png" will not be paired with "incompatible_with_this4.png"
+"decider_image.png" could be paired with "incompatible_with_this4.png"
+*/
+const incompatible = {
+  "High#20.png": ["Cyan#1.png", "Red#1.png"],
+  "Low#40.png": ["Purple#1.png"],
+};
+
 const shuffleLayerConfigurations = false;
 
 const debugLogs = false;
@@ -119,4 +132,5 @@ module.exports = {
   solanaMetadata,
   gif,
   preview_gif,
+  incompatible,
 };
